@@ -127,13 +127,11 @@ public class The1thDay {
             // 矩阵只有一行，且最后一个值小于目标值，则该矩阵一定不包含目标值
             return result;
         }
-        int high = matrix.length;
-        for (int i = 0; i < high; i++) {
-            if (matrix[i][0] <= target && matrix[i][weight - 1] >= target) {
+        for (int[] ints : matrix) {
+            if (ints[0] <= target && ints[weight - 1] >= target) {
                 // 循环内层
-                int[] sums = matrix[i];
-                for (int j = 0; j < sums.length; j++) {
-                    if (sums[j] == target) {
+                for (int anInt : ints) {
+                    if (anInt == target) {
                         return true;
                     }
                 }
