@@ -1,4 +1,4 @@
-package syx.july2021;
+package syx.basicAlgorithm;
 
 import org.junit.Test;
 
