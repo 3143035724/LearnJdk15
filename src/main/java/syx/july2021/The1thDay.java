@@ -110,6 +110,35 @@ public class The1thDay {
 
     @Test
     public void test() {
-        search1(new int[]{4, 5, 6, 7, 0, 1, 2}, 0);
+        searchMatrix(new int[][]{{1, 1}}, 3);
+    }
+
+    /**
+     * 题目：74.搜索二维矩阵
+     * https://leetcode-cn.com/problems/search-a-2d-matrix/
+     */
+    public boolean searchMatrix(int[][] matrix, int target) {
+        boolean result = false;
+        if (matrix == null || matrix.length == 0) {
+            return result;
+        }
+        int weight = matrix[0].length;
+        if (matrix.length == 1 && matrix[0][weight - 1] < target) {
+            // 矩阵只有一行，且最后一个值小于目标值，则该矩阵一定不包含目标值
+            return result;
+        }
+        int high = matrix.length;
+        for (int i = 0; i < high; i++) {
+            if (matrix[i][0] <= target && matrix[i][weight - 1] >= target) {
+                // 循环内层
+                int[] sums = matrix[i];
+                for (int j = 0; j < sums.length; j++) {
+                    if (sums[j] == target) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return result;
     }
 }
