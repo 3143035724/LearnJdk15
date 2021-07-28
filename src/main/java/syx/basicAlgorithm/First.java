@@ -5,10 +5,10 @@ import org.junit.Test;
 /**
  * @author syx
  * @className The1thDay
- * @description 标签：二分查找
+ * @description 算法基础第一天：标签：二分查找
  * @date 2021/07/26 17:06
  */
-public class The1thDay {
+public class First {
     /**
      * 题目：34. 在排序数组中查找元素的第一个和最后一个位置
      * https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/
