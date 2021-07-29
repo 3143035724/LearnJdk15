@@ -40,11 +40,6 @@ public class Second {
         return min;
     }
 
-    @Test
-    public void test() {
-        findMin(new int[]{1, 2, 3, 4, 5});
-    }
-
     public static void main(String[] args) {
         String s1 = "Programming";
         String s2 = new String("Programming");
@@ -58,5 +53,27 @@ public class Second {
         System.out.println(s1 == s6.intern());
         System.out.println(s2 == s2.intern());
 
+    }
+
+    @Test
+    public void test() {
+        // findMin(new int[]{1, 2, 3, 4, 5});
+        findPeakElement(new int[]{1, 7, 2});
+    }
+
+    /**
+     * 题目：162.寻找峰值 TODO 未实现
+     */
+    public int findPeakElement(int[] nums) {
+
+        // 不存在length为0或本身为null的情况，最小为1
+        if (nums.length == 1) {
+            return 0;
+        }
+        if (nums.length == 2) {
+            return nums[0] > nums[1] ? 0 : 1;
+        }
+
+        return 0;
     }
 }
