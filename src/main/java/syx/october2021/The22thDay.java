@@ -11,7 +11,7 @@ import java.util.Map;
  * @description 求众数
  * @date 2021/10/22 14:06
  */
-public class The22th {
+public class The22thDay {
 
     private static Map<Integer, Integer> countMap;
 
