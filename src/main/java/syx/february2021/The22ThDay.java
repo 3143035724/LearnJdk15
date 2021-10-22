@@ -16,7 +16,7 @@ import java.util.Set;
  * @version 1.0.0
  * @date 2021/2/22 10:10
  */
-public class The22ThDayDay {
+public class The22ThDay {
     /**
      * 题目：托普利茨矩阵
      * 给你一个 m x n 的矩阵 matrix 。如果这个矩阵是托普利茨矩阵，返回 true ；否则，返回 false
