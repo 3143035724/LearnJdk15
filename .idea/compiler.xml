@@ -9,5 +9,8 @@
         <module name="LearnJdk15" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="LearnJdk15" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
