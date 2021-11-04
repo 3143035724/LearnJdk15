@@ -6,9 +6,9 @@ import java.util.List;
 /**
  * @author syx
  * @className TheMixStack
- * @description TODO
- * @url
- * @tips
+ * @description leetcode Min Stack
+ * @url https://leetcode-cn.com/problems/min-stack/
+ * @tips Stack Design
  * @date 2021/11/04 11:27
  */
 public class TheMixStack {
