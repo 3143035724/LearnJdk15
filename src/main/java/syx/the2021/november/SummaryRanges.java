@@ -24,27 +24,20 @@ public class SummaryRanges {
         }
         List<Integer> info = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
-            if (info.size() == 0) {
-                info.add(nums[i]);
-            } else {
-                if (info.get(info.size() - 1) == nums[i] - 1) {
-                    info.add(nums[i]);
-                } else {
-                    list.add(info.size() == 1 ? info.get(0) + "" : info.get(0) + "->" + info.get(info.size() - 1));
-                    info = new ArrayList<>();
-                    info.add(nums[i]);
-                }
-                if (i == nums.length - 1) {
-                    list.add(info.size() == 1 ? info.get(0) + "" : info.get(0) + "->" + info.get(info.size() - 1));
-                }
+            if (i != 0 && info.get(info.size() - 1) != nums[i] - 1) {
+                list.add(info.size() == 1 ? info.get(0) + "" : info.get(0) + "->" + info.get(info.size() - 1));
+                info = new ArrayList<>();
             }
-
+            info.add(nums[i]);
+            if (i == nums.length - 1) {
+                list.add(info.size() == 1 ? info.get(0) + "" : info.get(0) + "->" + info.get(info.size() - 1));
+            }
         }
         return list;
     }
 
     public static void main(String[] args) {
-        summaryRanges(new int[]{1,2});
+        summaryRanges(new int[]{1, 2});
     }
 
 }
