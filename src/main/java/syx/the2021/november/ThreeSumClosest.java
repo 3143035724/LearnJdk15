@@ -1,5 +1,7 @@
 package syx.the2021.november;
 
+import java.util.Arrays;
+
 /**
  * @author syx
  * @className ThreeSumClosest
@@ -10,7 +12,41 @@ package syx.the2021.november;
  * @date 2021/11/10 9:42
  */
 public class ThreeSumClosest {
+
+
     public static int threeSumClosest(int[] nums, int target) {
+        // 选出三个整数，而非相邻的三个整数
+        int nearSum = nums[0] + nums[1] + nums[2];
+        int minAbs = Math.abs(nearSum - target);
+        if (nums.length == 3) {
+            return nearSum;
+        }
+        Arrays.sort(nums);
+        int length = nums.length;
+        for (int i = 0; i < length - 2; i++) {
+            int start = i + 1;
+            int end = length - 1;
+            while (start != end) {
+                int sum = nums[i] + nums[start] + nums[end];
+                if (sum == target) {
+                    return target;
+                }
+                int abs = Math.abs(sum - target);
+                if (abs < minAbs) {
+                    nearSum = sum;
+                }
+                minAbs = Math.min(abs, minAbs);
+                if (sum < target) {
+                    start++;
+                } else {
+                    end--;
+                }
+            }
+        }
+        return nearSum;
+    }
+
+    public static int threeSumClosest1(int[] nums, int target) {
         // 选出三个整数，而非相邻的三个整数
         int nearSum = nums[0] + nums[1] + nums[2];
         int minAbs = Math.abs(nearSum - target);
