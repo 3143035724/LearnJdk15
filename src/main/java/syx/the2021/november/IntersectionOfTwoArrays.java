@@ -16,11 +16,10 @@ public class IntersectionOfTwoArrays {
 
     public int[] intersection(int[] nums1, int[] nums2) {
         int[] result = new int[]{};
-        Set<Integer> set = new HashSet<>();
-
         if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0) {
             return result;
         }
+        Set<Integer> set = new HashSet<>();
         Arrays.sort(nums1);
         Arrays.sort(nums2);
         int firstPoints = 0;
