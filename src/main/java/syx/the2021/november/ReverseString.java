@@ -17,8 +17,7 @@ public class ReverseString {
         }
         // 反转数组
         int length = s.length;
-        int middle = length / 2;
-        for (int i = 0; i < middle; i++) {
+        for (int i = 0; i < length / 2; i++) {
             char temp = s[length - 1 - i];
             s[length - 1 - i] = s[i];
             s[i] = temp;
