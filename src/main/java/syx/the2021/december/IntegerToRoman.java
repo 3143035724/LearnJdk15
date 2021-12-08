@@ -10,11 +10,11 @@ package syx.the2021.december;
  */
 public class IntegerToRoman {
 
-    int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-    String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+    static int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    static String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
 
-    public String intToRoman(int num) {
+    public static String intToRoman(int num) {
         // 判断num所在区间
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < values.length; i++) {
@@ -29,5 +29,9 @@ public class IntegerToRoman {
             }
         }
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        intToRoman(1994);
     }
 }
