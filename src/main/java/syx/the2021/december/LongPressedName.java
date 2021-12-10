@@ -11,24 +11,24 @@ public class LongPressedName {
     public boolean isLongPressedName(String name, String typed) {
         // 判断是否为有效输入字符
         // typed为键盘输入
-        char[] systemInArray = typed.toCharArray();
-        char[] nameArray = name.toCharArray();
-        if (systemInArray.length <= nameArray.length) {
-            return name.equals(typed);
+        if (typed.length() <= name.length() && !typed.equals(name)) {
+            return false;
         }
-        int start = 0;
+        // 处理对应字符
+        int first = 0;
         int second = 0;
-        while (second < systemInArray.length) {
-            if (start < nameArray.length && nameArray[start] == systemInArray[second]) {
-                // 两者相等
-                start++;
+        char[] typedArray = typed.toCharArray();
+        char[] nameArray = name.toCharArray();
+        while (second < typedArray.length) {
+            if (first < nameArray.length && nameArray[first] == typedArray[second]) {
+                first++;
                 second++;
-            } else if (second > 0 && systemInArray[second] == systemInArray[second - 1]) {
+            } else if (second > 0 && typedArray[second] == typedArray[second - 1]) {
                 second++;
             } else {
                 return false;
             }
         }
-        return start == nameArray.length;
+        return first == nameArray.length;
     }
 }
