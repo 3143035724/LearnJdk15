@@ -1,15 +1,12 @@
 package syx.the2021.december;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author syx
  * @className SimpleString
  * @description 统计字符串中单次个数(有效单词个数，不包含空格)
  * @url https://leetcode-cn.com/problems/number-of-segments-in-a-string/
  * @tips String
- * @date 2021/12/08 9:53
+ * @date 2021/12/09 10:02
  */
 public class SimpleString {
 
