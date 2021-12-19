@@ -16,6 +16,24 @@ import java.util.Set;
 public class DisappearedArray {
 
     public static List<Integer> findDisappearedNumbers(int[] nums) {
+        // 优化
+        List<Integer> list = new ArrayList<>();
+        int length = nums.length;
+
+        for (int num : nums) {
+            int index = (num - 1) % length;
+            nums[index] += length;
+        }
+        for (int i = 0; i < length; i++) {
+            if (nums[i] <= length) {
+                list.add(i + 1);
+            }
+        }
+        return list;
+    }
+
+    public static List<Integer> findDisappearedNumbers1(int[] nums) {
+        // 原始
         // 要求：
         // 含有n个整数的数组nums，找到所有在[1,n]范围内但没有出现在nums中的数字
 
