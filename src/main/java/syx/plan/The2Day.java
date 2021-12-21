@@ -36,7 +36,7 @@ public class The2Day {
         if (m == nums1.length) {
             return;
         }
-        if (m == 0) {
+        if (nums1.length == n) {
             System.arraycopy(nums2, 0, nums1, 0, nums2.length);
             return;
         }
