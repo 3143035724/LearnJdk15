@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author syx
  * @className The2Day
- * @description 十四天计划-第二天
+ * @description 数据结构->十四天计划->第二天
  * @url https://leetcode-cn.com/problems/two-sum/、https://leetcode-cn.com/problems/merge-sorted-array/
  * @tips 1.两数之和、88.合并两个有序数组
  * @date 2021/12/21 17:45

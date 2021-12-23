@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author syx
  * @className The4Day
- * @description 十四天计划-第四天
+ * @description 数据结构->十四天计划->第四天
  * @url https://leetcode-cn.com/problems/pascals-triangle/、https://leetcode-cn.com/problems/reshape-the-matrix/
  * @tips 118.杨辉三角、566.重塑矩阵
  * @date 2021/12/23 9:24

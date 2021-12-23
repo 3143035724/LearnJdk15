@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author syx
  * @className The3Day
- * @description 十四天计划-第三天
+ * @description 数据结构->十四天计划->第三天
  * @url https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/、https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
  * @tips 350.两个数组的交集II、121.买卖股票的最佳时机
  * @date 2021/12/22 11:28
