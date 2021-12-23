@@ -1,4 +1,4 @@
-package syx.plan;
+package syx.plan.structure;
 
 import java.util.Arrays;
 
