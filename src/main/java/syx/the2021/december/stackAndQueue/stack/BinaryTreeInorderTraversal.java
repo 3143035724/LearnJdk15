@@ -15,7 +15,7 @@ public class BinaryTreeInorderTraversal {
 
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        // 左子树---> 根结点 ---> 右子树
+        // 中序遍历：左子树---> 根结点 ---> 右子树
         List<Integer> list = new ArrayList<>();
         search(root, list);
         return list;
