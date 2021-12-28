@@ -5,17 +5,16 @@ import java.util.List;
 
 /**
  * @author syx
- * @className BinaryTreeInorderTraversal
- * @description 94.二叉树的中序遍历
- * @url https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
+ * @className BinaryTreePreorderTraversal
+ * @description 144.二叉树的前序遍历
+ * @url https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
  * @tips 栈、树、深度优先搜索、二叉树
- * @date 2021/12/28 10:16
+ * @date 2021/12/28 10:36
  */
-public class BinaryTreeInorderTraversal {
+public class BinaryTreePreorderTraversal {
 
-
-    public List<Integer> inorderTraversal(TreeNode root) {
-        // 左子树---> 根结点 ---> 右子树
+    public List<Integer> preorderTraversal(TreeNode root) {
+        // 根结点 ---> 左子树 ---> 右子树
         List<Integer> list = new ArrayList<>();
         search(root, list);
         return list;
@@ -23,8 +22,8 @@ public class BinaryTreeInorderTraversal {
 
     private void search(TreeNode root, List<Integer> list) {
         if (root != null) {
-            search(root.left, list);
             list.add(root.val);
+            search(root.left, list);
             search(root.right, list);
         }
     }
