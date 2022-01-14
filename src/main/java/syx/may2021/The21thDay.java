@@ -1,4 +1,4 @@
-package main.java.syx.may2021;
+package syx.may2021;
 
 import org.junit.Test;
 
